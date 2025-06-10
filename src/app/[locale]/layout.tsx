@@ -4,7 +4,8 @@ import {routing} from '@/i18n/routing';
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
-import Header from './header';
+import Header from '../../components/header';
+import LocaleSwitcher from '@/components/locale-switcher';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,8 +40,11 @@ export default async function LocaleLayout({
      <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <LocaleSwitcher />
+          <Header />
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );

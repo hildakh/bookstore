@@ -6,5 +6,9 @@
   },
   "NewBook": {
     "new_book": "Ajouter un nouveau livre"
+  },
+  "LocaleSwitcher": {
+    "label": "Changer de langue",
+    "locale": "{locale, select, fr {🇫🇷 Français} en {🇺🇸 Anglais} other {Inconnu}}"
   }
 }
