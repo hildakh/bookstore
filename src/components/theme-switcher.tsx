@@ -1,16 +1,16 @@
 "use client";
 
-const Header = () => {
+const ThemeSwitcher = () => {
   const handleThemeSwitch = () => {
     document.documentElement.dataset.theme =
       document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'
   }
 
   return (
-    <button onClick={handleThemeSwitch} className="fixed top-3 right-3 bg-background">
+    <button onClick={handleThemeSwitch}>
       🌙 / ☀️
     </button>
   );
 }
 
-export default Header;
+export default ThemeSwitcher;

@@ -36,7 +36,7 @@ const LocaleSwitcherSelect = ({
 
   return (
     <label
-      className={`relative text-gray-400 ${isPending && 'transition-opacity [&:disabled]:opacity-30'}`}
+      className={`relative ${isPending && 'transition-opacity [&:disabled]:opacity-30'}`}
     >
       <p className="sr-only">{label}</p>
       <select
@@ -47,7 +47,6 @@ const LocaleSwitcherSelect = ({
       >
         {children}
       </select>
-      <span className="pointer-events-none absolute top-3 right-5">⌄</span>
     </label>
   );
 }

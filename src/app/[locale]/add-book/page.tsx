@@ -1,11 +1,11 @@
 import { useTranslations } from "next-intl";
 
  const NewBook = () => {
-  const t = useTranslations('NewBook');
+  const t = useTranslations('AddBook');
 
   return (
     <main>
-      <h1 className="text-4xl">{t('new_book')}</h1>
+      <h1 className="text-4xl">{t('add_book')}</h1>
       <form action="">
         <input type="text" name="title" id="book-title-input" className="border"/>
         <input type="text" name="author" id="book-author-input" className="border"/>

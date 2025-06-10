@@ -1,11 +1,11 @@
 {
   "HomePage": {
     "title": "Hello world!",
-    "new_book": "Add a new book",
+    "add_book": "Add a new book",
     "book_store": "BookStore"
   },
-  "NewBook": {
-    "new_book": "Add a new book"
+  "AddBook": {
+    "add_book": "Add a new book"
   },
   "LocaleSwitcher": {
     "label": "Change language",
