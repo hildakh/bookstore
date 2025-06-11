@@ -35,7 +35,7 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={locale}>
+    <html lang={locale} data-theme="light">
      <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

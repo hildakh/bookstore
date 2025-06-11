@@ -31,3 +31,8 @@ body {
   --background: #0f172a;
   --foreground: #f1f5f9;
 }
+
+[data-theme='light'] {
+  --background: #fffbeb;
+  --foreground: #451a03;
+}

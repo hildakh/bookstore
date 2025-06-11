@@ -1,11 +1,15 @@
 {
-  "HomePage": {
-    "title": "Hello world!",
-    "add_book": "Add a new book",
-    "book_store": "BookStore"
-  },
   "AddBook": {
     "add_book": "Add a new book"
+  },
+  "BookList": {
+    "loading": "Loading..."
+  },
+  "HomePage": {
+    "add_book": "Add a new book",
+    "book_store": "BookStore",
+    "home_page": "Home",
+    "title": "Hello world!"
   },
   "LocaleSwitcher": {
     "label": "Change language",
