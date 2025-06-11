@@ -1,18 +1,22 @@
 {
+  "AddBook": {
+    "add_book": "Ajouter un nouveau livre",
+    "author": "Auteur",
+    "price": "Prix",
+    "submit": "Sauvegarder",
+    "title": "Titre"
+  },
+  "BookList": {
+    "loading": "Chargement..."
+  },
   "HomePage": {
-    "title": "Bonjour le monde!",
     "add_book": "Ajouter un nouveau livre",
     "book_store": "Librairie",
-     "home_page": "Accueil"
-  },
-  "AddBook": {
-    "add_book": "Ajouter un nouveau livre"
+    "home_page": "Accueil",
+    "title": "Bonjour le monde!"
   },
   "LocaleSwitcher": {
     "label": "Changer de langue",
     "locale": "{locale, select, fr {🇫🇷 Français} en {🇺🇸 Anglais} other {Inconnu}}"
-  },
-  "BookList": {
-    "loading": "Chargement..."
   }
 }

@@ -1,6 +1,10 @@
 {
   "AddBook": {
-    "add_book": "Add a new book"
+    "add_book": "Add a new book",
+    "author": "Author",
+    "price": "Price",
+    "submit": "Save",
+    "title": "Title"
   },
   "BookList": {
     "loading": "Loading..."
