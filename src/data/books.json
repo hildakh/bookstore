@@ -1,0 +1,28 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "The Testament",
+      "author": "Margaret Atwood",
+      "price": 14.99
+    },
+    {
+      "id": 2,
+      "title": "The Lies of Locke Lamora",
+      "author": "Scott Lynch",
+      "price": 12.49
+    },
+    {
+      "id": 3,
+      "title": "City of Illusions",
+      "author": "Ursula K. Le Guin",
+      "price": 11.99
+    },
+    {
+      "id": 4,
+      "title": "Matilda",
+      "author": "Roald Dahl",
+      "price": 9.99
+    }
+  ]
+}
