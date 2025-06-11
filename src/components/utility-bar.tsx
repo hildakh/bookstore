@@ -1,7 +1,7 @@
 import LocaleSwitcher from "./locale-switcher";
 import ThemeSwitcher from "./theme-switcher";
 
-const UtilityBar = () => {
+export default function UtilityBar() {
   return (
     <div className="flex justify-end items-center gap-6">
       <LocaleSwitcher />
@@ -9,5 +9,3 @@ const UtilityBar = () => {
     </div>
   );
 };
-
-export default UtilityBar;

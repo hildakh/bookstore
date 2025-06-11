@@ -1,6 +1,6 @@
 "use client";
 
-const ThemeSwitcher = () => {
+export default function ThemeSwitcher() {
   const handleThemeSwitch = () => {
     document.documentElement.dataset.theme =
       document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'
@@ -12,5 +12,3 @@ const ThemeSwitcher = () => {
     </button>
   );
 }
-
-export default ThemeSwitcher;

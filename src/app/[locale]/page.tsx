@@ -6,14 +6,14 @@ export default function Home() {
   const t = useTranslations('HomePage');
 
   return (
-    <main>
+    <main className="flex flex-col items-center gap-6">
       <h1 className="text-4xl">
         {t('book_store')}
       </h1>
       <BookList />
       <Link
         href="/add-book"
-        className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition-colors"
+        className="bg-primary text-background px-6 py-3 rounded-lg hover:bg-accent transition-colors w-1/4"
       >{t('add_book')}
       </Link>
 

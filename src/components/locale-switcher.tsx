@@ -2,7 +2,7 @@ import {routing} from '@/i18n/routing';
 import LocaleSwitcherSelect from './locale-switcher-select';
 import { getLocale, getTranslations } from 'next-intl/server';
 
-const LocaleSwitcher = async () => {
+export default async function LocaleSwitcher() {
   const t = await getTranslations('LocaleSwitcher');
   const locale = await getLocale();
 
@@ -16,5 +16,3 @@ const LocaleSwitcher = async () => {
     </LocaleSwitcherSelect>
   );
 }
-
-export default LocaleSwitcher;

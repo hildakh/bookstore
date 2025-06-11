@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import UtilityBar from "./utility-bar";
 
-const NavBar = () => {
+export default function NavBar() {
   const t = useTranslations('HomePage');
 
   return (
@@ -12,5 +12,3 @@ const NavBar = () => {
     </div>
   );
 };
-
-export default NavBar;

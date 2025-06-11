@@ -2,26 +2,21 @@
 
 import { Book, useBooks } from "@/hooks/useBooks";
 import { useTranslations } from "next-intl";
+import Card from "./card";
 
-const BookList = () => {
-  const {books, loading} = useBooks();
+export default function BookList() {
+  const { books, loading } = useBooks();
   const t = useTranslations('BookList');
 
   return (
-    <div>
-      { loading ? (
+    <div className="w-3/4">
+      {loading ? (
         <p>{t('loading')}</p>
-      ): (
+      ) : (
         books.map((book: Book) => (
-          <div key={book.id}>
-            <p>{book.title}</p>
-            <p>{book.author}</p>
-            <p>{book.price}</p>
-          </div>
+          <Card key={book.id} book={book} />
         ))
       )}
     </div>
   )
 }
-
-export default BookList;

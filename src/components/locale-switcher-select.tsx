@@ -11,11 +11,11 @@ type Props = {
   label: string;
 };
 
-const LocaleSwitcherSelect = ({
+export default function LocaleSwitcherSelect ({
   children,
   defaultValue,
   label
-}: Props) => {
+}: Props) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const pathname = usePathname();
@@ -50,5 +50,3 @@ const LocaleSwitcherSelect = ({
     </label>
   );
 }
-
-export default LocaleSwitcherSelect;
