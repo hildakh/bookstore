@@ -1,5 +1,7 @@
 "use client";
 
+import { useBooks } from '@/hooks/useBooks';
+import { useRouter } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
 
@@ -10,20 +12,40 @@ interface FormData {
 }
 
 export default function AddBookForm() {
-  const t = useTranslations('AddBook');
-
   const [formData, setFormData] = useState<FormData>({
     title: '',
     author: '',
     price: '',
   });
+  const [formError, setFormError] = useState<string | null>(null);
 
-  const handleSubmit = () => {
-    console.log('submit');
+  const t = useTranslations('AddBook');
+  const { addBook } = useBooks();
+  const router = useRouter();
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setFormError(null);
+
+    const result = await addBook({
+      ...formData,
+      price: parseFloat(formData.price),
+    });
+
+    if (result.success) {
+      router.push('/');
+    } else {
+      setFormError(result.error || t('error'));
+    }
   }
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4 max-w-md items-center w-full">
+      {formError && (
+        <div className="text-red-600 px-4 py-3 rounded-lg bg-red-50">
+          {formError}
+        </div>
+      )}
       <div className="flex flex-col gap-2 w-3/4">
         <label htmlFor="book-title-input" className="font-medium text-left">
           {t('title')}

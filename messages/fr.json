@@ -2,11 +2,13 @@
   "AddBook": {
     "add_book": "Ajouter un nouveau livre",
     "author": "Auteur",
+    "error": "Échec de l'ajout du livre",
     "price": "Prix",
     "submit": "Sauvegarder",
     "title": "Titre"
   },
   "BookList": {
+    "error": "Échec de la récupération des livres",
     "loading": "Chargement..."
   },
   "HomePage": {

@@ -2,11 +2,13 @@
   "AddBook": {
     "add_book": "Add a new book",
     "author": "Author",
+    "error": "Failed to add the book",
     "price": "Price",
     "submit": "Save",
     "title": "Title"
   },
   "BookList": {
+    "error": "Failed to fetch books",
     "loading": "Loading..."
   },
   "HomePage": {
