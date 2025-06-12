@@ -1,29 +1,29 @@
-import {NextIntlClientProvider, hasLocale} from 'next-intl';
+import {hasLocale, NextIntlClientProvider} from 'next-intl';
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata } from 'next';
+import { Geist, Geist_Mono } from 'next/font/google';
 import NavBar from '@/components/nav-bar';
-import "../globals.css";
+import '../globals.css';
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: "Bookstore",
-  description: "Multilingual bookstore application"
+  title: 'Bookstore',
+  description: 'Multilingual bookstore application',
 };
 
 export default async function LocaleLayout({
   children,
-  params
+  params,
 }: {
   children: React.ReactNode;
   params: Promise<{locale: string}>;
@@ -36,7 +36,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} data-theme="light">
-     <body
+      <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NextIntlClientProvider>

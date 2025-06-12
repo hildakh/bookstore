@@ -1,6 +1,6 @@
-import Link from "next/link";
+import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import BookList from "@/components/book-list";
+import BookList from '@/components/book-list';
 
 export default function Home() {
   const t = useTranslations('HomePage');

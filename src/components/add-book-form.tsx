@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { useBooks } from '@/hooks/useBooks';
 import { useRouter } from '@/i18n/navigation';
@@ -44,7 +44,7 @@ export default function AddBookForm() {
     } else {
       setFormError(result.error || t('error.generic'));
     }
-  }
+  };
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4 max-w-md items-center w-full">

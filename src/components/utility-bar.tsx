@@ -1,5 +1,5 @@
-import LocaleSwitcher from "./locale-switcher";
-import ThemeSwitcher from "./theme-switcher";
+import LocaleSwitcher from './locale-switcher';
+import ThemeSwitcher from './theme-switcher';
 
 export default function UtilityBar() {
   return (

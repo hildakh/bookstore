@@ -14,7 +14,7 @@ type Props = {
 export default function LocaleSwitcherSelect ({
   children,
   defaultValue,
-  label
+  label,
 }: Props) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
@@ -29,7 +29,7 @@ export default function LocaleSwitcherSelect ({
         // are used in combination with a given `pathname`. Since the two will
         // always match for the current route, we can skip runtime checks.
         {pathname, params},
-        {locale: nextLocale}
+        {locale: nextLocale},
       );
     });
   }

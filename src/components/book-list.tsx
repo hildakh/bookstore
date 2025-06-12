@@ -1,8 +1,8 @@
 'use client';
 
-import { useBooks } from "@/hooks/useBooks";
-import { useTranslations } from "next-intl";
-import Card from "./card";
+import { useBooks } from '@/hooks/useBooks';
+import { useTranslations } from 'next-intl';
+import Card from './card';
 
 export default function BookList() {
   const { books, loading, error } = useBooks();

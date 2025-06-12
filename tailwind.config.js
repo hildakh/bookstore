@@ -4,7 +4,7 @@ module.exports = {
       fontFamily: {
         serif: ['Georgia', 'Cambria', 'serif'],
       },
-    }
+    },
   },
   darkMode: 'class',
-}
+};

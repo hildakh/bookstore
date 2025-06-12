@@ -1,4 +1,4 @@
-import { Book } from "@/hooks/useBooks";
+import { Book } from '@/hooks/useBooks';
 
 interface Props {
   book: Book

@@ -1,6 +1,6 @@
-"use client"
+'use client';
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 export interface Book {
   id: string;
@@ -40,7 +40,7 @@ export function useBooks() {
       const response = await fetch('/api/books', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(newBook),
       });
@@ -48,7 +48,7 @@ export function useBooks() {
       if (!response.ok) {
         return {
           success: false,
-          error: `Failed to add book: ${response.statusText}`
+          error: `Failed to add book: ${response.statusText}`,
         };
       }
 
@@ -59,7 +59,7 @@ export function useBooks() {
     } catch (error) {
       return {
         success: false,
-        error: error instanceof Error ? error.message : 'Failed to add book'
+        error: error instanceof Error ? error.message : 'Failed to add book',
       };
     }
   };

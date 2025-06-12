@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { useTranslations } from "next-intl";
-import UtilityBar from "./utility-bar";
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import UtilityBar from './utility-bar';
 
 export default function NavBar() {
   const t = useTranslations('HomePage');

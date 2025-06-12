@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 const THEME_KEY = 'bookstore-theme';
 
@@ -36,7 +36,7 @@ export default function ThemeSwitcher() {
 
   return (
     <button onClick={handleThemeSwitch} className="text-2xl">
-      { theme === 'light' ? '🌞' : '🌜' }
+      {theme === 'light' ? '🌞' : '🌜'}
     </button>
   );
 }

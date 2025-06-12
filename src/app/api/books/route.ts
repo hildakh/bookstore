@@ -8,7 +8,7 @@ let books = [...initialBooks.books];
 export async function GET() {
   return NextResponse.json(
     { books },
-    { status: 200 }
+    { status: 200 },
   );
 };
 
@@ -20,7 +20,7 @@ export async function POST(request: Request) {
     if (!newBook.title || !newBook.author || !newBook.price) {
       return NextResponse.json({
         error: 'Missing required fields',
-        status: 400
+        status: 400,
       });
     }
 
@@ -34,12 +34,12 @@ export async function POST(request: Request) {
 
     return NextResponse.json(
       { books },
-      { status: 201 }
+      { status: 201 },
     );
   } catch (error) {
     return NextResponse.json({
       error: `Failed to add book ${error}`,
-      status: 500
+      status: 500,
     });
   }
 }
