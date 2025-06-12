@@ -34,6 +34,11 @@ export default function AddBookForm() {
       return;
     }
 
+    if (!formData.title.trim() || !formData.author.trim()) {
+      setFormError(t('error.required_field_missing'));
+      return;
+    }
+
     const result = await addBook({
       ...formData,
       price,
@@ -50,7 +55,7 @@ export default function AddBookForm() {
     <form onSubmit={handleSubmit} className="flex flex-col gap-4 max-w-md items-center w-full">
       {formError && (
         <div className="text-red-600 px-4 py-3 rounded-lg bg-red-50">
-          {formError}
+          ⚠️ {formError}
         </div>
       )}
       <div className="flex flex-col gap-2 w-3/4">
