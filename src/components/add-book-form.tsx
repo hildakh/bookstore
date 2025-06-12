@@ -27,15 +27,22 @@ export default function AddBookForm() {
     e.preventDefault();
     setFormError(null);
 
+    const price = parseFloat(formData.price);
+
+    if (isNaN(price) || price <= 0) {
+      setFormError(t('error.invalid_price'));
+      return;
+    }
+
     const result = await addBook({
       ...formData,
-      price: parseFloat(formData.price),
+      price,
     });
 
     if (result.success) {
       router.push('/');
     } else {
-      setFormError(result.error || t('error'));
+      setFormError(result.error || t('error.generic'));
     }
   }
 
