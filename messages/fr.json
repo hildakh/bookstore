@@ -2,7 +2,11 @@
   "AddBook": {
     "add_book": "Ajouter un nouveau livre",
     "author": "Auteur",
-    "error": "Échec de l'ajout du livre",
+    "error": {
+      "generic": "Échec de l'ajout du livre",
+      "invalid_price": "Prix invalide",
+      "required_field_missing": "Champ requis manquant"
+    },
     "price": "Prix",
     "submit": "Sauvegarder",
     "title": "Titre"
@@ -20,5 +24,12 @@
   "LocaleSwitcher": {
     "label": "Changer de langue",
     "locale": "{locale, select, fr {🇫🇷 Français} en {🇺🇸 Anglais} other {Inconnu}}"
+  },
+  "API": {
+    "errors": {
+      "add_book_failed": "Échec de l'ajout du livre",
+      "required_field_missing": "Champ requis manquant",
+      "fetch_books_failed": "Échec de la récupération des livres"
+    }
   }
 }

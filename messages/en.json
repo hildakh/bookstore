@@ -4,7 +4,8 @@
     "author": "Author",
     "error": {
       "generic": "Failed to add the book",
-      "invalid_price": "Invalid price"
+      "invalid_price": "Invalid price",
+      "required_field_missing": "Required field is missing"
     },
     "price": "Price",
     "submit": "Save",
@@ -23,5 +24,12 @@
   "LocaleSwitcher": {
     "label": "Change language",
     "locale": "{locale, select, fr {🇫🇷 French} en {🇺🇸 English} other {Unknown}}"
+  },
+  "API": {
+    "errors": {
+      "add_book_failed": "Failed to add book",
+      "required_field_missing": "Required field is missing",
+      "fetch_books_failed": "Failed to fetch books"
+    }
   }
 }

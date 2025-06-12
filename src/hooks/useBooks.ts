@@ -1,13 +1,8 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-
-export interface Book {
-  id: string;
-  title: string;
-  author: string;
-  price: number;
-}
+import { useCallback, useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
+import { Book } from '@/types/book';
 
 type AddBookResult = {
   success: boolean;
@@ -18,24 +13,28 @@ export function useBooks() {
   const [books, setBooks] = useState<Book[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const t = useTranslations('API');
 
-  const fetchBooks = async () => {
+  const fetchBooks = useCallback(async () => {
     try {
       const response = await fetch('/api/books');
+
       if (!response.ok) {
-        throw new Error(`Failed to fetch books: ${response.statusText}`);
+        const data = await response.json().catch(() => ({}));
+        throw new Error(data.error) || `HTTP ${response.status}`;
       }
+
       const data = await response.json();
       setBooks(data.books);
       setError(null);
     } catch (error) {
-      setError(error instanceof Error ? error.message : 'Failed to fetch books');
+      setError(error instanceof Error ? error.message : t('error.fetch_books_failed'));
     } finally {
       setLoading(false);
     }
-  };
+  }, [t]);
 
-  const addBook = async (newBook: Omit<Book, 'id'>): Promise<AddBookResult> => {
+  const addBook = useCallback(async (newBook: Omit<Book, 'id'>): Promise<AddBookResult> => {
     try {
       const response = await fetch('/api/books', {
         method: 'POST',
@@ -46,27 +45,27 @@ export function useBooks() {
       });
 
       if (!response.ok) {
+        const data = await response.json().catch(() => ({}));
         return {
           success: false,
-          error: `Failed to add book: ${response.statusText}`,
+          error: data.error || t('error.add_book_failed'),
         };
       }
 
       const data = await response.json();
       setBooks(data.books);
       return { success: true };
-
-    } catch (error) {
+    } catch {
       return {
         success: false,
-        error: error instanceof Error ? error.message : 'Failed to add book',
+        error: t('error.add_book_failed'),
       };
     }
-  };
+  }, [t]);
 
   useEffect(() => {
     fetchBooks();
-  }, []);
+  }, [fetchBooks]);
 
   return {
     addBook,
