@@ -110,7 +110,7 @@ export default function AddBookForm() {
 
       <button
         type="submit"
-        className="bg-primary text-background px-6 py-3 rounded-lg
+        className="bg-primary text-background px-6 py-3 rounded-lg w-1/2 md:w-2/5
                  hover:bg-accent transition-colors mt-4"
       >
         {t('submit')}
