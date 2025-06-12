@@ -13,7 +13,7 @@ export default function Home() {
       <BookList />
       <Link
         href="/add-book"
-        className="bg-primary text-background text-lg px-6 py-3 rounded-lg w-1/4 mb-4 hover:bg-accent transition-colors duration-200"
+        className="bg-primary text-background text-lg px-6 py-3 rounded-lg w-1/2 md:w-1/4 mb-4 hover:bg-accent transition-colors duration-200"
       >{t('add_book')}
       </Link>
     </main>
